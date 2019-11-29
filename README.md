@@ -3,15 +3,16 @@ React Native chat app
 
 
 ```bash
-npm install
+cd server && npm install
+cd TestLogin && npm install
 ```
 
 ## Run
 
 ```bash
 cd server && npm start
-npm run ios # ios
-npm run android # android
+npm run ios # build ios
+npm run android # build android
 
 ```
 
