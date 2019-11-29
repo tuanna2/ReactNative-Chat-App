@@ -1,0 +1,53 @@
+{
+  "name": "TestLogin",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "query-string": "^6.9.0",
+    "react": "16.9.0",
+    "react-native": "0.61.4",
+    "react-native-elements": "^1.2.7",
+    "react-native-material-menu": "^1.0.0",
+    "react-native-vector-icons": "^6.6.0",
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/generator": "^7.7.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "detox": "^14.7.1",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "mocha": "^6.2.2",
+    "react-router-native": "^5.1.2",
+    "react-router-native-stack": "0.0.16",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/TestLogin.app",
+        "build": "xcodebuild -workspace ios/TestLogin.xcworkspace -scheme TestLogin -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11"
+        }
+      }
+    },
+    "test-runner": "jest"
+  }
+}
